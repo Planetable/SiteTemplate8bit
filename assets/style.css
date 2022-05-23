@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('./fonts/PressStart2P-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'dinkie';
+  src: url('./fonts/DinkieBitmap-9px.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'dinkie';
+  font-style: italic;
+  src: url('./fonts/DinkieBitmap-9pxItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'dinkie code';
+  src: url('./fonts/DinkieBitmap-9pxCode.woff2') format('woff2');
+}
+
+:root {
+  --background-color: #111;
+  --foreground-color: #fff;
+  --foreground-secondary-color: #eee;
+  --border-color: #e2e2e2;
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 0px;
+  margin: 0px;
+  font-family: helvetica neue,arial,hiragino sans gb,microsoft yahei,sans-serif;
+}
+
+a:link, a:visited, a:active {
+  color: #639bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #639bff;
+  text-decoration: underline;
+}
+
+h1 {
+  color: var(--foreground-color);
+  font-size: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  color: var(--border-color);
+  background-color: var(--border-color);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.date {
+  font-size: 0.8em;
+  color: var(--foreground-secondary-color);
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0px auto 0px auto;
+}
+
+.content {
+  line-height: 160%;
+  font-size: 18px;
+  color: var(--foreground-color);
+}
+
+p:first-child, ul:first-child {
+  margin-top: 0px;
+}
+
+p:last-child, ul:last-child {
+  margin-bottom: 0px;
+}
+
+.date {
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-size: 18px;
+  font-family: "dinkie";
+}
+
+.bottom {
+  margin-top: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 14px;
+  font-family: "dinkie";
+}
