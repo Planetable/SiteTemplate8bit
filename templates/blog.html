@@ -1,39 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta content="True" name="HandheldFriendly">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#fff">
-    <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
-    <title>{{ article.title }}</title>
-    <link rel="stylesheet" type="text/css" href="../assets/style.css" />
-    <script type="text/javascript" src="../assets/components.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const fmt = new Intl.DateTimeFormat(undefined, {
-          dateStyle: "long",
-          timeStyle: "medium",
-        });
-        const date = new Date();
-        document.querySelector(".date").innerText = fmt.format(date);
-      });
-    </script>
-  </head>
-  <body>
-  <video playsinline muted loop autoplay style="width: 100%; height: 100%; position: fixed; top: 0px; object-fit: cover; z-index: -100; filter: brightness(var(--backdrop-brightness));">
-    <source src="../assets/bg.webm" type="video/webm">
-  </video>
-  <div class="wrapper"><div class="main"><retro-box style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5)); margin-bottom: 20px;">
-    <h1>{{ article.title }}</h1>
-  </retro-box>
-  <div class="date"></div>
-  <color-box theme="ice" style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
-    <div class="content">
-      {{ content_html }}
-    </div>
-  </color-box>
-  <div class="bottom">This site is built with <a href="https://planetable.xyz/?from=app" target="_blank">Planetable</a></div>
-  </div></div>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block dom_ready %}
+const fmt = new Intl.DateTimeFormat(undefined, {
+  dateStyle: "long",
+  timeStyle: "medium",
+});
+const date = new Date();
+document.querySelector(".date").innerText = fmt.format(date);
+{% endblock %}
+{% block main %}
+<retro-box style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5)); margin-bottom: 20px;">
+  <h1>{{ article.title }}</h1>
+</retro-box>
+<div class="date"></div>
+<color-box theme="ice" style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
+  <div class="content">
+    {{ content_html }}
+  </div>
+</color-box>
+<div class="bottom">This site is built with <a href="https://planetable.xyz/?from=app" target="_blank">Planetable</a></div>
+{% endblock %}

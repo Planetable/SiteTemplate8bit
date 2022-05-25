@@ -111,3 +111,21 @@ p:last-child, ul:last-child {
   font-size: 14px;
   font-family: "dinkie";
 }
+
+.site-header {
+  margin-bottom: 20px;
+}
+
+.site-title {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.site-about {
+  font-size: 12px;
+  line-height: 160%;
+  text-align: left;
+}

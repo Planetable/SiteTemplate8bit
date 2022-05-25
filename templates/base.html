@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="True" name="HandheldFriendly">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#fff">
+    <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ assets_prefix }}assets/style.css" />
+    <script>
+      var assets_prefix = '{{ assets_prefix }}';
+      document.addEventListener("DOMContentLoaded", () => {
+        {% block dom_ready %}
+        {% endblock %}
+      });
+    </script>
+    <script type="text/javascript" src="{{ assets_prefix }}assets/components.js"></script>
+  </head>
+  <body>
+  <video playsinline muted loop autoplay style="width: 100%; height: 100%; position: fixed; top: 0px; object-fit: cover; z-index: -100; filter: brightness(var(--backdrop-brightness));">
+    <source src="{{ assets_prefix }}assets/bg.webm" type="video/webm">
+  </video>
+  <div class="wrapper"><div class="main">
+  {% block main %}
+  {% endblock %}
+  </div></div>
+  </body>
+</html>
