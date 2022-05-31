@@ -8,6 +8,11 @@
     <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
     <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="{{ assets_prefix }}assets/style.css?r={{ build_timestamp }}" />
+    <script>
+      window.PLANET = {
+        assetsPrefix: '{{ assets_prefix }}',
+      };
+    </script>
     <script type="text/javascript" src="{{ assets_prefix }}assets/components.js"></script>
   </head>
   <body>

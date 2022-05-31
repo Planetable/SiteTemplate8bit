@@ -2,9 +2,13 @@ const PIXEL_FONT = "Press Start 2P";
 
 // ##### retro-box #####
 
-const RETRO_BOX_TEMPLATE = document.createElement('template');
+class RetroBox extends HTMLElement {
+    constructor() {
+        super();
 
-RETRO_BOX_TEMPLATE.innerHTML =
+        // TEMPLATE
+        const RETRO_BOX_TEMPLATE = document.createElement("template");
+        RETRO_BOX_TEMPLATE.innerHTML =
 `
 <style>
     :host {
@@ -16,7 +20,7 @@ RETRO_BOX_TEMPLATE.innerHTML =
 
     .retro-box-main {
         grid-area: 2 / 2 / 2 / 5;
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-bg-tile-dark.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-bg-tile-dark.png');
         background-size: 64px 64px;
         background-repeat: repeat;
         color: white;
@@ -30,50 +34,50 @@ RETRO_BOX_TEMPLATE.innerHTML =
     }
 
     .top-left {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-top-left-corner.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-top-left-corner.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .top-right {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-top-right-corner.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-top-right-corner.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .bottom-left {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-bottom-left-corner.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-bottom-left-corner.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .bottom-right {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-bottom-right-corner.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-bottom-right-corner.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .horizontal-left {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-horizontal-left.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-horizontal-left.png');
         background-size: 112px 16px;
         background-repeat: no-repeat;
     }
 
     .horizontal-right {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-horizontal-right.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-horizontal-right.png');
         background-size: 112px 16px;
         background-repeat: no-repeat;
     }
 
     .vertical-tile {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-vertical-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-vertical-tile.png');
         background-size: 16px 80px;
         background-repeat: repeat-y;
         image-rendering: pixelated;
     }
 
     .horizontal-tile {
-        background-image: url('${assets_prefix}assets/retro-box/retro-box-horizontal-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/retro-box/retro-box-horizontal-tile.png');
         background-size: 64px 16px;
         background-repeat: repeat-x;
         image-rendering: pixelated;
@@ -96,10 +100,6 @@ RETRO_BOX_TEMPLATE.innerHTML =
 <div class="horizontal-right"></div>
 <div class="bottom-right"></div>
 `
-
-class RetroBox extends HTMLElement {
-    constructor() {
-        super();
 
         const SHADOW_ROOT = this.attachShadow({ 'mode': 'closed' });
         let content = RETRO_BOX_TEMPLATE.content.cloneNode(true);
@@ -225,14 +225,14 @@ class ColorBox extends HTMLElement {
         let style = document.createElement('style');
         style.id = 'theme-css';
         style.innerHTML = `
-            .top-left { background-image: url('${assets_prefix}assets/boxes/${theme}/top-left.png'); }
-            .top-right { background-image: url('${assets_prefix}assets/boxes/${theme}/top-right.png'); }
-            .bottom-left { background-image: url('${assets_prefix}assets/boxes/${theme}/bottom-left.png'); }
-            .bottom-right { background-image: url('${assets_prefix}assets/boxes/${theme}/bottom-right.png'); }
-            .left-tile { background-image: url('${assets_prefix}assets/boxes/${theme}/left-tile.png'); }
-            .right-tile { background-image: url('${assets_prefix}assets/boxes/${theme}/right-tile.png'); }
-            .top-tile { background-image: url('${assets_prefix}assets/boxes/${theme}/top-tile.png'); }
-            .bottom-tile { background-image: url('${assets_prefix}assets/boxes/${theme}/bottom-tile.png'); }
+            .top-left { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/top-left.png'); }
+            .top-right { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/top-right.png'); }
+            .bottom-left { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/bottom-left.png'); }
+            .bottom-right { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/bottom-right.png'); }
+            .left-tile { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/left-tile.png'); }
+            .right-tile { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/right-tile.png'); }
+            .top-tile { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/top-tile.png'); }
+            .bottom-tile { background-image: url('${window.PLANET.assetsPrefix}assets/boxes/${theme}/bottom-tile.png'); }
         `;
         let elem = this.shadowRoot.querySelector('#theme-css');
         if (elem) {
@@ -255,9 +255,12 @@ class ColorBox extends HTMLElement {
 
 // ##### mech-box #####
 
-const MECH_BOX_TEMPLATE = document.createElement('template');
+class MechBox extends HTMLElement {
+    constructor() {
+        super();
 
-MECH_BOX_TEMPLATE.innerHTML =
+        const MECH_BOX_TEMPLATE = document.createElement('template');
+        MECH_BOX_TEMPLATE.innerHTML =
 `
 <style>
     :host {
@@ -272,7 +275,7 @@ MECH_BOX_TEMPLATE.innerHTML =
 
     .mech-box-main {
         background-color: black;
-        background-image: url('${assets_prefix}assets/boxes/mech/main-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/main-tile.png');
         background-size: 64px 64px;
         background-repeat: repeat;
         color: black;
@@ -291,52 +294,52 @@ MECH_BOX_TEMPLATE.innerHTML =
     }
 
     .top-left {
-        background-image: url('${assets_prefix}assets/boxes/mech/top-left.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/top-left.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .top-right {
-        background-image: url('${assets_prefix}assets/boxes/mech/top-right.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/top-right.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .bottom-left {
-        background-image: url('${assets_prefix}assets/boxes/mech/bottom-left.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/bottom-left.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .bottom-right {
-        background-image: url('${assets_prefix}assets/boxes/mech/bottom-right.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/bottom-right.png');
         background-size: 16px 16px;
         background-repeat: no-repeat;
     }
 
     .left-tile {
-        background-image: url('${assets_prefix}assets/boxes/mech/left-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/left-tile.png');
         background-size: 16px 64px;
         background-repeat: repeat-y;
         image-rendering: pixelated;
     }
 
     .right-tile {
-        background-image: url('${assets_prefix}assets/boxes/mech/right-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/right-tile.png');
         background-size: 16px 64px;
         background-repeat: repeat-y;
         image-rendering: pixelated;
     }
 
     .top-tile {
-        background-image: url('${assets_prefix}assets/boxes/mech/top-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/top-tile.png');
         background-size: 64px 16px;
         background-repeat: repeat-x;
         image-rendering: pixelated;
     }
 
     .bottom-tile {
-        background-image: url('${assets_prefix}assets/boxes/mech/bottom-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/boxes/mech/bottom-tile.png');
         background-size: 64px 16px;
         background-repeat: repeat-x;
         image-rendering: pixelated;
@@ -359,10 +362,6 @@ MECH_BOX_TEMPLATE.innerHTML =
 <div class="bottom-tile"></div>
 <div class="bottom-right"></div>
 `
-
-class MechBox extends HTMLElement {
-    constructor() {
-        super();
 
         const SHADOW_ROOT = this.attachShadow({ 'mode': 'closed' });
         let content = MECH_BOX_TEMPLATE.content.cloneNode(true);
@@ -422,28 +421,28 @@ class SimpleBox extends HTMLElement {
     }
 
     .top-left {
-        background-image: url('${assets_prefix}assets/simple-box/simple-box-top-left.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/simple-box/simple-box-top-left.png');
         background-size: 32px 32px;
         background-repeat: no-repeat;
         image-rendering: pixelated;
     }
 
     .top-right {
-        background-image: url('${assets_prefix}assets/simple-box/simple-box-top-right.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/simple-box/simple-box-top-right.png');
         background-size: 32px 32px;
         background-repeat: no-repeat;
         image-rendering: pixelated;
     }
 
     .bottom-left {
-        background-image: url('${assets_prefix}assets/simple-box/simple-box-bottom-left.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/simple-box/simple-box-bottom-left.png');
         background-size: 32px 32px;
         background-repeat: no-repeat;
         image-rendering: pixelated;
     }
 
     .bottom-right {
-        background-image: url('${assets_prefix}assets/simple-box/simple-box-bottom-right.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/simple-box/simple-box-bottom-right.png');
         background-size: 32px 32px;
         background-repeat: no-repeat;
         image-rendering: pixelated;
@@ -466,7 +465,7 @@ class SimpleBox extends HTMLElement {
     }
 
     .bottom-tile {
-        background-image: url('${assets_prefix}assets/simple-box/simple-box-bottom-tile.png');
+        background-image: url('${window.PLANET.assetsPrefix}assets/simple-box/simple-box-bottom-tile.png');
         background-size: 32px 32px;
         background-repeat: repeat-x;
         image-rendering: pixelated;
