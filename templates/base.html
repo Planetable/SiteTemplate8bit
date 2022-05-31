@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
     <title>{{ page_title }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ assets_prefix }}assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ assets_prefix }}assets/style.css?r={{ build_timestamp }}" />
     <script>
       var assets_prefix = '{{ assets_prefix }}';
       document.addEventListener("DOMContentLoaded", () => {
