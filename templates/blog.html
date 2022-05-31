@@ -4,7 +4,7 @@ const fmt = new Intl.DateTimeFormat(undefined, {
   dateStyle: "long",
   timeStyle: "medium",
 });
-const date = new Date();
+const date = new Date("{{ created_date }}");
 document.querySelector(".date").innerText = fmt.format(date);
 {% endblock %}
 {% block main %}
