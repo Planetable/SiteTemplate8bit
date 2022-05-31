@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-{% block dom_ready %}
-{% endblock %}
 {% block main %}
 <mech-box class="site-header">
   <div class="site-title">{{ page_title }}</div>
@@ -11,7 +9,7 @@
     <div class="items">
     {% for article in articles %}
     <div class="item">
-    <div class="item-date">{{ article.created }}</div>
+    <div class="item-date">{{ article.created|formatDate }}</div>
     <div class="item-title"><a href="./{{ article.link }}">{{ article.title }}</a></div>
     </div>
     {% endfor %}
