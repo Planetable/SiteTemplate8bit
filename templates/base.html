@@ -14,6 +14,10 @@
       };
     </script>
     <script type="text/javascript" src="{{ assets_prefix }}assets/components.js"></script>
+    {% block head %}{% endblock %}
+    {% if planet.plausibleEnabled %}
+    <script defer data-domain="{{ planet.plausibleDomain }}" src="https://plausible.io/js/plausible.local.js"></script>
+    {% endif %}
   </head>
   <body>
   <video playsinline muted loop autoplay style="width: 100%; height: 100%; position: fixed; top: 0px; object-fit: cover; z-index: -100; filter: brightness(var(--backdrop-brightness));">
