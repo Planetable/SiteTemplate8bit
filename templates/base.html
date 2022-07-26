@@ -9,7 +9,9 @@
     <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="{{ assets_prefix }}assets/style.css?r={{ build_timestamp }}" />
     <script>
+      let userAgentRegex = /Planet\/\S*/;
       window.PLANET = {
+        visitedFromPlanetClient: !!navigator.userAgent.match(userAgentRegex),
         assetsPrefix: '{{ assets_prefix }}',
       };
     </script>
@@ -20,12 +22,14 @@
     {% endif %}
   </head>
   <body>
-  <video playsinline muted loop autoplay style="width: 100%; height: 100%; position: fixed; top: 0px; object-fit: cover; z-index: -100; filter: brightness(var(--backdrop-brightness));">
-    <source src="{{ assets_prefix }}assets/bg.webm" type="video/webm">
-  </video>
-  <div class="wrapper"><div class="main">
-  {% block main %}
-  {% endblock %}
-  </div></div>
+    <video playsinline muted loop autoplay style="width: 100%; height: 100%; position: fixed; top: 0px; object-fit: cover; z-index: -100; filter: brightness(var(--backdrop-brightness));">
+      <source src="{{ assets_prefix }}assets/bg.webm" type="video/webm">
+    </video>
+    <div class="wrapper">
+      <div class="main">
+      {% block main %}
+      {% endblock %}
+      </div>
+    </div>
   </body>
 </html>

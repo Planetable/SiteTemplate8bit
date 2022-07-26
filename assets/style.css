@@ -27,13 +27,13 @@
 }
 
 html {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-color: var(--background-color);
-  padding: 0px;
+  padding: 0;
   margin: 0px;
   font-family: helvetica neue,arial,hiragino sans gb,microsoft yahei,sans-serif;
 }
@@ -59,7 +59,7 @@ h1 {
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 hr {
@@ -82,7 +82,7 @@ hr {
 
 .main {
   max-width: 800px;
-  margin: 0px auto 0px auto;
+  margin: 0 auto;
 }
 
 .content {
@@ -92,15 +92,15 @@ hr {
 }
 
 p:first-child, ul:first-child, pre:first-child {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 p:last-child, ul:last-child, pre:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .date {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0;
   text-align: center;
   color: rgba(255, 255, 255, 1);
   text-align: center;
@@ -138,7 +138,7 @@ p:last-child, ul:last-child, pre:last-child {
 .video-container {
   width: 100%;
   padding-top: 56.25%;
-  height: 0px;
+  height: 0;
   position: relative;
   border-radius: 2px;
 }
