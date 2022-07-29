@@ -81,7 +81,7 @@ hr {
 }
 
 .main {
-  max-width: 800px;
+  max-width: calc(800px - env(safe-area-inset-left) - env(safe-area-inset-left));
   margin: 0 auto;
 }
 
