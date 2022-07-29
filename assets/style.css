@@ -156,4 +156,10 @@ p:last-child, ul:last-child, pre:last-child {
   .site-title {
     font-size: 16px;
   }
+
+  h1 {
+    font-size: 1.5em;
+    line-break: anywhere;
+    word-break: break-all;
+  }
 }
