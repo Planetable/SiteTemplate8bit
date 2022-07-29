@@ -279,7 +279,7 @@ class MechBox extends HTMLElement {
         background-size: 64px 64px;
         background-repeat: repeat;
         color: black;
-        font-family: '${PIXEL_FONT}', 'Consolas', monospace;
+        font-family: '${PIXEL_FONT}', 'dinkie', 'Consolas', monospace;
         font-size: 16px;
         padding: 0px;
         text-align: center;
