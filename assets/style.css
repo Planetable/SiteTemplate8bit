@@ -91,6 +91,18 @@ hr {
   color: var(--foreground-color);
 }
 
+.breadcrumb {
+  line-height: 160%;
+  font-size: 18px;
+  color: var(--foreground-color);
+  margin-bottom: 20px;
+  font-family: 'dinkie';
+}
+
+.chevron {
+  margin: 0px 8px;
+}
+
 p:first-child, ul:first-child, pre:first-child {
   margin-top: 0;
 }

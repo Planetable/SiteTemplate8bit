@@ -21,6 +21,10 @@
       let elem = audioTemplate.content.firstElementChild.cloneNode(true);
       anchor.insertAdjacentElement(placement, elem);
       {% endif %}
+      breadcrumb([
+        { text: '{{ planet.name }}', url: '../' },
+        { text: '{{ article.title }}', url: './' },
+      ]);
     }
   });
 </script>
