@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block main %}
 <mech-box class="site-header">
-  <div class="site-title">{{ page_title }}</div>
-  <div class="site-about">{{ page_description }}</div>
+  <div class="site-title">{{ page_title|escapeHTML }}</div>
+  <div class="site-about">{{ page_description|escapeHTML }}</div>
 </mech-box>
 <color-box theme="ice" style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
   <div class="content">
@@ -10,7 +10,7 @@
     {% for article in articles %}
     <div class="item">
     <div class="item-date">{{ article.created|formatDate }}</div>
-    <div class="item-title"><a href=".{{ article.link }}">{{ article.title }}</a></div>
+    <div class="item-title"><a href=".{{ article.link }}">{{ article.title|escapeHTML }}</a></div>
     </div>
     {% endfor %}
     </div>
