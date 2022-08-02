@@ -22,8 +22,8 @@
       anchor.insertAdjacentElement(placement, elem);
       {% endif %}
       breadcrumb([
-        { text: '{{ planet.name }}', url: '../' },
-        { text: '{{ article.title }}', url: './' },
+        { text: '{{ planet.name|escapejs }}', url: '../' },
+        { text: '{{ article.title|escapejs }}', url: './' },
       ]);
     }
   });
