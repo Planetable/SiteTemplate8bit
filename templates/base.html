@@ -56,7 +56,7 @@
     <script type="text/javascript" src="{{ assets_prefix }}assets/components.js"></script>
     {% block head %}{% endblock %}
     {% if planet.plausibleEnabled %}
-    <script defer data-domain="{{ planet.plausibleDomain }}" src="https://plausible.io/js/plausible.local.js"></script>
+    <script defer data-domain="{{ planet.plausibleDomain }}" src="https://{{ planet.plausibleAPIServer }}/js/plausible.local.js"></script>
     {% endif %}
   </head>
   <body>
