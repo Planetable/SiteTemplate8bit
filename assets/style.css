@@ -24,6 +24,7 @@
   --foreground-color: #fff;
   --foreground-secondary-color: #eee;
   --border-color: #e2e2e2;
+  --item-gap: 24px;
 }
 
 html {
@@ -171,6 +172,20 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
 
 .audio {
   width: 100%;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+}
+
+.item-date {
+  font-size: 12px;
+}
+
+.item-title {
+  font-size: 18px;
 }
 
 @media (max-width: 600px) {

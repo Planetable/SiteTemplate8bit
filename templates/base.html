@@ -44,9 +44,12 @@
         }
 
         container.append(getStubElem(stubs[0]));
+        container.append(getSeparatorElem());
         for (let i = 1; i < stubs.length; i++)  {
-          container.append(getSeparatorElem());
           container.append(getStubElem(stubs[i]));
+          if (i < stubs.length - 1) {
+            container.append(getSeparatorElem());
+          }
         }
 
         let main = document.querySelector('.main');

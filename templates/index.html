@@ -9,7 +9,7 @@
     <div class="items">
     {% for article in articles %}
     <div class="item">
-    <div class="item-date">{{ article.created|formatDate }}</div>
+    <div class="item-date">{{ article.created|ymd }}</div>
     <div class="item-title"><a href=".{{ article.link }}">{{ article.title|escape }}</a></div>
     </div>
     {% endfor %}
