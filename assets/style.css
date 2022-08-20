@@ -73,7 +73,7 @@ hr {
 }
 
 .date {
-  font-size: 0.8em;
+  font-size: 16px;
   color: var(--foreground-secondary-color);
 }
 
@@ -134,6 +134,26 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
   margin-bottom: 20px;
 }
 
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-avatar {
+}
+
+.site-avatar img {
+  width: 72px;
+  height: 72px;
+  image-rendering: pixelated;
+  vertical-align: bottom;
+}
+
+.site-info {
+  flex: 1;
+}
+
 .site-title {
   font-size: 24px;
   line-height: 1;
@@ -181,11 +201,12 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
 }
 
 .item-date {
-  font-size: 12px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .item-title {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 @media (max-width: 600px) {
