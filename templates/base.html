@@ -64,8 +64,10 @@
     {% if planet.plausibleEnabled %}
     <script defer data-domain="{{ planet.plausibleDomain }}" src="https://{{ planet.plausibleAPIServer }}/js/plausible.local.js"></script>
     {% endif %}
+    {% if custom_code_head.count > 0 %}{{ custom_code_head }}{% endif %}
   </head>
   <body>
+    {% if custom_code_body_start.count > 0 %}{{ custom_code_body_start }}{% endif %}
     <video playsinline muted loop autoplay style="width: 100%; height: 100%; position: fixed; top: 0px; object-fit: cover; z-index: -100; filter: brightness(var(--backdrop-brightness));">
       <source src="{{ assets_prefix }}assets/bg.webm" type="video/webm">
     </video>
@@ -76,4 +78,5 @@
       </div>
     </div>
   </body>
+  {% if custom_code_body_end.count > 0 %}{{ custom_code_body_end }}{% endif %}
 </html>
