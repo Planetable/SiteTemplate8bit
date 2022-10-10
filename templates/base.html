@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#111">
     <title>{{ page_title|escape }}</title>
     <link rel="stylesheet" type="text/css" href="{{ assets_prefix }}assets/style.css?sha256={{ style_css_sha256 }}" />
+    <link rel="preload" href="{{ assets_prefix }}planet.json" as="fetch" type="application/json" crossorigin="anonymous">
     <script>
       let userAgentRegex = /Planet\/\S*/;
       window.PLANET = {
