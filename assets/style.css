@@ -52,6 +52,10 @@ a:hover {
 code {
   font-family: 'dinkie code';
   font-size: 0.9em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 h1 {
@@ -90,6 +94,8 @@ hr {
   line-height: 160%;
   font-size: 18px;
   color: var(--foreground-color);
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 .breadcrumb {
