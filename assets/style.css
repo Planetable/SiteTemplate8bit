@@ -215,6 +215,21 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
   font-size: 24px;
 }
 
+.pages-container {
+  display: flex;
+  margin-top: 20px;
+  gap: 16px;
+}
+
+.pages-info {
+  flex: 1;
+  text-align: center;
+}
+
+.page-placeholder {
+  min-width: 100px;
+}
+
 @media (max-width: 600px) {
   .site-title {
     font-size: 16px;
