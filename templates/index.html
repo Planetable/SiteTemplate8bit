@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
+{% block head %}
+{% include 'modules/planet_seo.html' %}
+<!-- Pagination -->
+{% if previous_page %}
+<link rel="prev" href="./{{ previous_page }}">
+{% endif %}
+{% if next_page %}
+<link rel="next" href="./{{ next_page }}">
+{% endif %}
+{% endblock %}
 {% block main %}
 <mech-box class="site-header">
   <div class="site-header-inner">
