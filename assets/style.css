@@ -226,8 +226,8 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
   text-align: center;
 }
 
-.page-placeholder {
-  min-width: 100px;
+.page-placeholder, #page-next, #page-prev {
+  min-width: 80px;
 }
 
 @media (max-width: 600px) {
