@@ -61,6 +61,8 @@ code {
 h1 {
   color: var(--foreground-color);
   font-size: 2em;
+  padding: 0px 4px;
+  line-height: 120%;
 }
 
 img {
@@ -237,7 +239,7 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
 
   h1 {
     font-size: 1.5em;
-    line-break: anywhere;
-    word-break: break-all;
+    padding: 0px 4px;
+    line-height: 120%;
   }
 }

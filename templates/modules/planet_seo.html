@@ -10,7 +10,10 @@
   <meta property="og:image:alt" content="{{ planet.name|escape }}" />
 {% endif %}
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="{{ planet.name|escape }}" />
+{% if planet.twitterUsername.count > 0 %}
+  <meta name="twitter:site" content="@{{ planet.twitterUsername|escape }}" />
+  <meta name="twitter:creator" content="@{{ planet.twitterUsername|escape }}" />
+{% endif %}
 <meta name="twitter:title" content="{{ planet.name|escape }}" />
 <meta name="twitter:description" content="{{ page_description|escape }}" />
 {% if has_avatar %}
