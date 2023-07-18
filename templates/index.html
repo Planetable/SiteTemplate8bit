@@ -23,7 +23,7 @@
   </div>
   </div>
 </mech-box>
-<color-box theme="ice" style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
+<color-box theme="ice" style="backdrop-filter: blur(8px); filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
   <div class="content">
     <div class="items">
     {% for article in articles %}
@@ -40,7 +40,9 @@
       {% else %}
       <div class="page-placeholder"></div>
       {% endif %}
+      {% if previous_page or next_page %}
       <div class="pages-info">{{ current_page }} / {{ total_pages }}</div>
+      {% endif %}
       {% if next_page %}
       <a href="./{{ next_page }}" class="nav-current" id="page-next">NEXT →</a>
       {% else %}

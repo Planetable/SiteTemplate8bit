@@ -34,7 +34,7 @@
   <h1>{{ article.title|escape }}</h1>
 </retro-box>
 <div class="date">{{ article.created|formatDate }}</div>
-<color-box theme="ice" style="filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
+<color-box theme="ice" style="backdrop-filter: blur(8px); filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
   <div class="content">
     {% if article.hasVideo %}
     <div class="video-container">
