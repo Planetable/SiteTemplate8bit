@@ -51,6 +51,15 @@ color-box {
   text-align: center;
 }
 
+a.nav-current:link, a.nav-current:visited {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+a.nav-current:hover {
+  text-decoration: underline;
+}
+
 .nav-inner {
   display: inline-flex;
   gap: 18px;
