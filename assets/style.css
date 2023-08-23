@@ -113,9 +113,20 @@ hr {
   margin-bottom: 1em;
 }
 
-.date {
+.post-info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.post-info-inner {
+  margin: 0 auto;
+  display: inline-flex;
+  gap: 8px;
   font-size: 16px;
   color: var(--foreground-secondary-color);
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  font-family: "dinkie";
 }
 
 .wrapper {
@@ -153,15 +164,6 @@ p:first-child, ul:first-child, pre:first-child {
 
 p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
   margin-bottom: 0;
-}
-
-.date {
-  margin: 20px 0;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  text-align: center;
-  font-size: 18px;
-  font-family: "dinkie";
 }
 
 .bottom {
