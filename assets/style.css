@@ -40,6 +40,12 @@ body {
   font-family: helvetica neue,arial,hiragino sans gb,microsoft yahei,sans-serif;
 }
 
+color-box {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));
+}
+
 #nav {
   margin-bottom: 20px;
   text-align: center;
@@ -294,6 +300,13 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+
+.tag-caption {
+  font-size: 1em;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .tag-title {

@@ -14,8 +14,19 @@
 {% block main %}
 {% include 'modules/site_header.html' %}
 {% include 'modules/nav.html' %}
-<color-box theme="ice" style="backdrop-filter: blur(8px); filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.5));">
+<color-box theme="ice">
   <div class="content">
+    {% if tag_key %}
+    <div class="tag-container">
+      <div class="tag-caption">
+        <a href="{{ assets_prefix }}tags.html">Tags</a>
+        <span class="chevron">›</span>
+      </div>
+      <div class="tag-title">{{ tag_value }}</div>
+      <div class="tag-count">{{ articles.count }} article{% if articles.count > 1 %}s{% endif %}</div>
+    </div>
+    {% endif %}
+
     <div class="items">
     {% for article in articles %}
     <div class="item">
