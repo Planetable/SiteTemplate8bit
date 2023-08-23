@@ -24,6 +24,7 @@
   --foreground-color: #fff;
   --foreground-secondary-color: #eee;
   --border-color: #fff;
+  --border-color-dark: rgba(255, 255, 255, 0.1);
   --item-gap: 24px;
 }
 
@@ -249,7 +250,7 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
 
 .tag-cloud {
   column-count: 3;
-  column-rule: 2px solid var(--border-color);
+  column-rule: 2px solid var(--border-color-dark);
   column-gap: 40px;
   line-height: 2;
 }
@@ -273,7 +274,9 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
 }
 
 .tag-container {
-  margin: 0px auto 20px auto;
+  margin: 0px auto 40px auto;
+  border-bottom: 2px solid var(--border-color-dark);
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -286,8 +289,60 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
 }
 
 .tag-count {
-  font-size: 0.8em;
+  font-size: 1em;
   color: var(--foreground-secondary-color);
+}
+
+.archive-container {
+  margin: 0px auto 40px auto;
+  border-bottom: 2px solid var(--border-color-dark);
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.archive-title {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.archive-count {
+  font-size: 1em;
+  color: var(--foreground-secondary-color);
+}
+
+.archive-list {
+  column-count: 3;
+  column-rule: 2px solid var(--border-color-dark);
+  column-gap: 40px;
+  line-height: 1.2;
+}
+
+.archive-list-item {
+  display: block;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 10px;
+}
+
+.archive-list-header {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: var(--foreground-secondary-color);
+}
+
+.archive-list-header:first-child {
+  margin-top: 0px;
+}
+
+.archive-list-item a {
+  line-break: initial;
 }
 
 @media (max-width: 600px) {
@@ -301,14 +356,14 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
     line-height: 120%;
   }
 
-  .tag-cloud {
+  .tag-cloud, .archive-list {
     column-count: 2;
     column-gap: 30px;
   }
 }
 
 @media (max-width: 400px) {
-  .tag-cloud {
+  .tag-cloud, .archive-list {
     column-count: 1;
     column-gap: 24px;
   }
