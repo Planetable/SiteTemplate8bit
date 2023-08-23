@@ -54,6 +54,20 @@ body {
   margin: 0 auto;
 }
 
+.nav-inner>span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-icon {
+  image-rendering: pixelated;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 a:link, a:visited, a:active {
   color: #639bff;
   text-decoration: none;
