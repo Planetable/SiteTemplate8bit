@@ -268,6 +268,37 @@ p:last-child, ul:last-child, pre:last-child, .audio-container:last-child {
   min-width: 80px;
 }
 
+#page-next, #page-prev {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+span.dot {
+  color: var(--foreground-color);
+}
+
+span.next {
+  display: inline-block;
+  width: 22px;
+  height: 24px;
+  background-image: url('next.png');
+  background-size: 22px 24px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  
+}
+
+span.prev {
+  display: inline-block;
+  width: 22px;
+  height: 24px;
+  background-image: url('prev.png');
+  background-size: 22px 24px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
 .tag-cloud {
   column-count: 3;
   column-rule: 2px solid var(--border-color-dark);
