@@ -77,10 +77,11 @@ a.nav-current:hover {
 
 .nav-icon {
   image-rendering: pixelated;
-  vertical-align: middle;
+  vertical-align: sub;
   width: 24px;
   height: 24px;
   object-fit: contain;
+  border: none;
 }
 
 a:link, a:visited, a:active {
