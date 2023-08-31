@@ -67,6 +67,7 @@ a.nav-current:hover {
   font-family: "dinkie";
   font-weight: bold;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .nav-inner>span {
@@ -82,6 +83,14 @@ a.nav-current:hover {
   height: 24px;
   object-fit: contain;
   border: none;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  image-rendering: pixelated;
+  vertical-align: sub;
 }
 
 a:link, a:visited, a:active {

@@ -3,10 +3,10 @@
   "description": "A template inspired by 8-bit era games",
   "author": "Planetable Team",
   "authorWebsite": "https://planetable.xyz",
-  "version": "22",
+  "version": "23",
   "idealItemsPerPage": 8,
   "generateIndexPagination": true,
-  "buildNumber": 47,
+  "buildNumber": 48,
   "generateTagPages": true,
   "generateArchive": true
 }
