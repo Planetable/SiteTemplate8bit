@@ -85,6 +85,15 @@ a.nav-current:hover {
   border: none;
 }
 
+.site-avatar-image {
+  border-top: 2px solid #666;
+  border-left: 2px solid #666;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background-color: #e0e0e0;
+  vertical-align: bottom;
+}
+
 .social-icon {
   width: 24px;
   height: 24px;
